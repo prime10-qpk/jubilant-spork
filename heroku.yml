@@ -1,5 +1,5 @@
-build:
-  docker:
-    worker: Dockerfile
-run:
-  worker: python3 main.py
+heroku login
+heroku container:login
+heroku @LegXend_music_bot
+heroku container:push worker -@LegXend_music_bot
+heroku container:release worker -@LegXend_music_bot
